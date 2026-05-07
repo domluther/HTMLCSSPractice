@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML &amp; CSS Predict – A-Level Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-tag">&lt;/&gt;</span>
+        <div>
+          <h1>HTML &amp; CSS Predict</h1>
+          <p class="tagline">OCR A-Level Computer Science – H446</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── HOME SCREEN ── -->
+  <main id="homeScreen" class="screen active">
+    <div class="card welcome-card">
+      <h2>How does it work?</h2>
+      <div class="mode-explainer-grid">
+        <div class="mode-explainer">
+          <div class="mode-icon">👁️</div>
+          <h3>Code → Output</h3>
+          <p>You are shown some HTML (and CSS) code. Predict what the browser would display.</p>
+        </div>
+        <div class="mode-explainer">
+          <div class="mode-icon">⌨️</div>
+          <h3>Output → Code</h3>
+          <p>You are shown a rendered output. Write the HTML (and CSS) code that produced it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Choose your session</h2>
+      <div class="option-grid">
+
+        <button class="option-btn" data-difficulty="basic" data-type="code-to-output">
+          <span class="option-badge basic">Basic</span>
+          <span class="option-title">Code → Output</span>
+          <span class="option-desc">HTML only · Predict the browser output</span>
+        </button>
+
+        <button class="option-btn" data-difficulty="basic" data-type="output-to-code">
+          <span class="option-badge basic">Basic</span>
+          <span class="option-title">Output → Code</span>
+          <span class="option-desc">HTML only · Write the code</span>
+        </button>
+
+        <button class="option-btn" data-difficulty="advanced" data-type="code-to-output">
+          <span class="option-badge advanced">Advanced</span>
+          <span class="option-title">Code → Output</span>
+          <span class="option-desc">HTML + CSS · Predict the browser output</span>
+        </button>
+
+        <button class="option-btn" data-difficulty="advanced" data-type="output-to-code">
+          <span class="option-badge advanced">Advanced</span>
+          <span class="option-title">Output → Code</span>
+          <span class="option-desc">HTML + CSS · Write the code</span>
+        </button>
+
+        <button class="option-btn mixed" data-difficulty="basic" data-type="mixed">
+          <span class="option-badge basic">Basic</span>
+          <span class="option-title">Mixed Practice</span>
+          <span class="option-desc">HTML only · Both question types</span>
+        </button>
+
+        <button class="option-btn mixed" data-difficulty="advanced" data-type="mixed">
+          <span class="option-badge advanced">Advanced</span>
+          <span class="option-title">Mixed Practice</span>
+          <span class="option-desc">HTML + CSS · Both question types</span>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="card reference-toggle-card">
+      <button id="toggleRefBtn" class="secondary-btn">📖 Show HTML &amp; CSS Reference</button>
+      <div id="referencePanel" class="reference-panel hidden">
+        <div class="ref-cols">
+          <div class="ref-col">
+            <h4>HTML Tags (OCR H446)</h4>
+            <table class="ref-table">
+              <tr><td><code>&lt;html&gt;</code></td><td>Root element</td></tr>
+              <tr><td><code>&lt;head&gt;</code></td><td>Document metadata</td></tr>
+              <tr><td><code>&lt;title&gt;</code></td><td>Page title</td></tr>
+              <tr><td><code>&lt;link&gt;</code></td><td>Link to CSS file</td></tr>
+              <tr><td><code>&lt;body&gt;</code></td><td>Page content</td></tr>
+              <tr><td><code>&lt;h1&gt;–&lt;h3&gt;</code></td><td>Headings</td></tr>
+              <tr><td><code>&lt;p&gt;</code></td><td>Paragraph</td></tr>
+              <tr><td><code>&lt;a href=""&gt;</code></td><td>Hyperlink</td></tr>
+              <tr><td><code>&lt;img src="" alt="" width="" height=""&gt;</code></td><td>Image</td></tr>
+              <tr><td><code>&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt;</code></td><td>Lists</td></tr>
+              <tr><td><code>&lt;div&gt;</code></td><td>Block container</td></tr>
+              <tr><td><code>&lt;form&gt;</code></td><td>Form</td></tr>
+              <tr><td><code>&lt;input type="text" name=""&gt;</code></td><td>Text box</td></tr>
+              <tr><td><code>&lt;input type="submit"&gt;</code></td><td>Submit button</td></tr>
+              <tr><td><code>&lt;script&gt;</code></td><td>JavaScript</td></tr>
+            </table>
+          </div>
+          <div class="ref-col">
+            <h4>CSS Properties (OCR H446)</h4>
+            <table class="ref-table">
+              <tr><td><code>background-color</code></td><td>Background colour</td></tr>
+              <tr><td><code>border-color</code></td><td>Border colour</td></tr>
+              <tr><td><code>border-style</code></td><td>e.g. solid, dashed</td></tr>
+              <tr><td><code>border-width</code></td><td>e.g. 2px</td></tr>
+              <tr><td><code>color</code></td><td>Text colour (named or hex)</td></tr>
+              <tr><td><code>font-family</code></td><td>Font name</td></tr>
+              <tr><td><code>font-size</code></td><td>e.g. 16px</td></tr>
+              <tr><td><code>height</code></td><td>Element height</td></tr>
+              <tr><td><code>width</code></td><td>Element width</td></tr>
+            </table>
+            <h4 style="margin-top:1rem;">CSS Selectors</h4>
+            <table class="ref-table">
+              <tr><td><code>h1 { }</code></td><td>Element selector</td></tr>
+              <tr><td><code>.className { }</code></td><td>Class selector</td></tr>
+              <tr><td><code>#idName { }</code></td><td>ID selector</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── QUESTION SCREEN ── -->
+  <main id="questionScreen" class="screen">
+
+    <div class="q-topbar">
+      <button id="backBtn" class="icon-btn" title="Back to home">← Home</button>
+      <div class="q-meta">
+        <span id="qDifficultyBadge" class="option-badge">Basic</span>
+        <span id="qTypeBadge" class="type-badge">Code → Output</span>
+        <span id="qCounter" class="q-counter">Q1 of 4</span>
+      </div>
+      <div class="progress-bar-wrap"><div id="progressBar" class="progress-bar"></div></div>
+    </div>
+
+    <div class="q-layout">
+
+      <!-- LEFT: prompt area -->
+      <section class="q-prompt card">
+        <h2 id="qTitle">Question title</h2>
+        <p id="qDescription" class="q-description"></p>
+
+        <!-- Code display (code-to-output mode) -->
+        <div id="codeDisplay" class="code-display-area hidden">
+          <div class="code-label css-label">CSS</div>
+          <pre id="cssCodeBlock" class="code-block hidden"></pre>
+          <div class="code-label">HTML</div>
+          <pre id="htmlCodeBlock" class="code-block"></pre>
+        </div>
+
+        <!-- Output display (output-to-code mode) -->
+        <div id="outputDisplay" class="output-display-area hidden">
+          <div class="code-label">Browser Output</div>
+          <iframe id="outputFrame" class="output-frame" sandbox="allow-same-origin" title="Rendered output"></iframe>
+        </div>
+
+        <button id="hintBtn" class="secondary-btn hint-btn">💡 Show hint</button>
+        <div id="hintBox" class="hint-box hidden"></div>
+      </section>
+
+      <!-- RIGHT: answer area -->
+      <section class="q-answer card">
+
+        <!-- code-to-output: student draws / describes -->
+        <div id="predictArea" class="hidden">
+          <h3>Your prediction</h3>
+          <p class="instruction-text">Sketch or describe what the browser would show. When ready, reveal the actual output below.</p>
+          <textarea id="sketchNotes" class="sketch-textarea" placeholder="Optional: type notes about what you expect to see…" aria-label="Prediction notes"></textarea>
+          <button id="revealBtn" class="primary-btn">Reveal output</button>
+          <div id="revealBox" class="reveal-box hidden">
+            <div class="code-label">Actual Browser Output</div>
+            <iframe id="revealFrame" class="output-frame" sandbox="allow-same-origin" title="Actual rendered output"></iframe>
+            <div class="self-assess">
+              <p>How did you do?</p>
+              <div class="assess-btns">
+                <button class="assess-btn correct" data-score="correct">✅ Got it</button>
+                <button class="assess-btn partial" data-score="partial">🟡 Mostly right</button>
+                <button class="assess-btn wrong" data-score="wrong">❌ Missed it</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- output-to-code: student types code -->
+        <div id="codeInputArea" class="hidden">
+          <h3>Your code</h3>
+          <p class="instruction-text">Write the HTML (and CSS if needed) that produces the output shown.</p>
+          <textarea id="studentCode" class="code-textarea" placeholder="Type your HTML here…" spellcheck="false" aria-label="Your code answer"></textarea>
+          <div class="code-input-btns">
+            <button id="previewBtn" class="secondary-btn">👁 Preview my code</button>
+            <button id="showAnswerBtn" class="primary-btn">Show model answer</button>
+          </div>
+          <div id="studentPreviewBox" class="reveal-box hidden">
+            <div class="code-label">Your Preview</div>
+            <iframe id="studentPreviewFrame" class="output-frame" sandbox="allow-same-origin" title="Your code preview"></iframe>
+          </div>
+          <div id="modelAnswerBox" class="reveal-box hidden">
+            <div class="code-label">Model Answer</div>
+            <pre id="modelAnswerCode" class="code-block answer-block"></pre>
+            <div class="self-assess">
+              <p>How did you do?</p>
+              <div class="assess-btns">
+                <button class="assess-btn correct" data-score="correct">✅ Got it</button>
+                <button class="assess-btn partial" data-score="partial">🟡 Mostly right</button>
+                <button class="assess-btn wrong" data-score="wrong">❌ Missed it</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Next / finish -->
+    <div class="q-nav hidden" id="qNav">
+      <button id="nextBtn" class="primary-btn next-btn">Next question →</button>
+    </div>
+
+  </main>
+
+  <!-- ── RESULTS SCREEN ── -->
+  <main id="resultsScreen" class="screen">
+    <div class="card results-card">
+      <h2>Session complete! 🎉</h2>
+      <div id="scoreDisplay" class="score-display"></div>
+      <div id="scoreBreakdown" class="score-breakdown"></div>
+      <div class="results-btns">
+        <button id="retryBtn" class="primary-btn">Try again</button>
+        <button id="homeBtn" class="secondary-btn">← Back to home</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
