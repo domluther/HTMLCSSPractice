@@ -60,7 +60,7 @@ const questions = [
   <li>An Inspector Calls</li>
 </ol>
 <a href="bookings.html">Book tickets</a>`,
-    hint: "You need a paragraph, an ordered list (ol) with three list items, and an anchor tag (a) with an href attribute."
+    hint: "You need a paragraph, an ordered list (ol) with three list items, and an anchor tag with href=\"bookings.html\" linking to the text 'Book tickets'."
   },
 
   {
@@ -95,7 +95,7 @@ const questions = [
   <p>Email: <input type="text" name="email"></p>
   <input type="submit" value="Send">
 </form>`,
-    hint: "You need a form element containing input elements. Text boxes use type=\"text\" with a name attribute. The button uses type=\"submit\"."
+    hint: "You need a form containing two text inputs and a submit button. Use name=\"username\" for the Name field and name=\"email\" for the Email field. The submit button has value=\"Send\"."
   },
 
   {
@@ -149,7 +149,7 @@ const questions = [
     </ul>
   </body>
 </html>`,
-    hint: "Remember the full page requires html, head (with title) and body elements wrapping everything."
+    hint: "Wrap everything in html, head and body elements. The title element (inside head) should contain 'School Website' — this matches the h1 text."
   },
 
   {
@@ -229,7 +229,7 @@ h2 {
 <div class="infoBox">
   <p>This is an information box.</p>
 </div>`,
-    hint: "Use a CSS class selector (.infoBox) applied to a div. You need background-color, color, border properties, width and height."
+    hint: "The div uses class=\"infoBox\". CSS: background-color: green; color: white; border-style: solid; border-color: black; border-width: 2px; width: 300px; height: 100px."
   },
 
   {
@@ -311,7 +311,7 @@ h2 {
     <input type="submit" value="Register">
   </form>
 </div>`,
-    hint: "Style the h2 with color and font-family. Wrap the form in a div with a CSS class that sets background, border and size properties."
+    hint: "The wrapping div uses class=\"formBox\". Input name attributes: name=\"username\" and name=\"password\". CSS for .formBox: background-color: lightgrey; border-style: solid; border-color: darkgrey; border-width: 1px; width: 350px; height: 180px."
   },
 
   {
@@ -396,7 +396,7 @@ h1 {
   color: white;
   height: 50px;
 }`,
-    hint: "The HTML page needs a link element in the head to connect to style.css. Use an ID selector for the footer div."
+    hint: "The html page needs a link element (rel=\"stylesheet\" href=\"style.css\") in the head. Title should be 'My Portfolio'. The footer div uses id=\"footer\". CSS: h1 font-size: 36px; #footer height: 50px."
   },
 
   // ── BASIC – additional ─────────────────────────────────────────────────────
@@ -427,7 +427,7 @@ h1 {
     answer: `<h2>Photo of the Week</h2>
 <img src="sunset.jpg" alt="A beautiful sunset" width="400" height="250">
 <p>Taken at the coast last summer.</p>`,
-    hint: "You need an h2, a self-closing img tag with src, alt, width and height attributes, then a paragraph."
+    hint: "You need an h2, then a self-closing img tag with these exact attributes: src=\"sunset.jpg\", alt=\"A beautiful sunset\", width=\"400\", height=\"250\". Then a paragraph."
   },
 
   {
@@ -450,7 +450,7 @@ h1 {
   <p>Email: <input type="text" name="email"></p>
   <input type="submit" value="Register">
 </form>`,
-    hint: "Each text field needs type=\"text\" and a name attribute to identify it. The button needs type=\"submit\"."
+    hint: "Three text inputs with name=\"firstname\", name=\"lastname\", name=\"email\". The submit button has value=\"Register\"."
   },
 
   {
@@ -503,7 +503,7 @@ h1 {
   <p>12 High Street, Springfield</p>
   <a href="map.html">View map</a>
 </div>`,
-    hint: "Use two separate div elements, each containing a h2, a p, and (in the second) an anchor tag."
+    hint: "Use two separate div elements. The second div contains a h2, a p and an anchor tag with href=\"map.html\" linking to 'View map'."
   },
 
   {
@@ -565,7 +565,7 @@ h1 {
     <a href="method.html">See method</a>
   </body>
 </html>`,
-    hint: "Wrap everything in an html element with a head (containing title) and a body containing the visible content."
+    hint: "Wrap everything in html, head and body elements. The title (inside head) should be 'Tasty Recipes'. The link at the bottom has href=\"method.html\"."
   },
 
   {
@@ -667,7 +667,7 @@ p {
   <h1>Sports Club</h1>
 </div>
 <p>Join us for training every Tuesday and Thursday.</p>`,
-    hint: "Use an ID selector for the header div. The h1 inside can be targeted with #header h1. A separate p rule styles the paragraph."
+    hint: "The div uses id=\"header\". CSS: #header height: 60px; width: 100%; #header h1 font-size: 24px; p font-size: 16px."
   },
 
   {
@@ -741,7 +741,7 @@ h1 {
 <h1>Choose a Category</h1>
 <div class="box"><p>Sports</p></div>
 <div class="box"><p>Music</p></div>`,
-    hint: "Both divs share the same class, so one CSS class rule styles both. The h1 uses an element selector."
+    hint: "Both divs use class=\"box\". CSS: .box width: 250px; height: 70px; border-style: solid; border-color: purple; border-width: 2px; background-color: lavender."
   },
 
   {
@@ -844,7 +844,7 @@ h2 {
   border-color: blue;
   border-width: 1px;
 }`,
-    hint: "Use a link element in the head to connect to style.css. The sidebar uses an ID selector with background, size and border properties."
+    hint: "Title should be 'School Portal'. Link to style.css in the head. The div uses id=\"sidebar\". CSS: h1 font-size: 28px; h2 font-size: 20px; #sidebar width: 200px; height: 150px; border-style: solid; border-color: blue; border-width: 1px."
   },
 
   {
@@ -939,6 +939,6 @@ input {
   <a href="contact.html">Contact</a>
 </div>
 <h1>Welcome</h1>`,
-    hint: "The navbar uses an ID selector for the bar itself and targets links inside it with #navbar a. The .active class highlights the current page link."
+    hint: "The div uses id=\"navbar\". The Home link also has class=\"active\". CSS: #navbar height: 45px; width: 100%; #navbar a font-size: 16px; .active background-color: orange; color: black."
   }
 ];
